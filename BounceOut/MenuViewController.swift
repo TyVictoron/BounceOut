@@ -12,6 +12,7 @@ import AVFoundation
 class MenuViewController: UIViewController {
 
     var backgroundMusic = AVAudioPlayer()
+    //var backgroundMusic = AVAudioPlayer()
     
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
         //1

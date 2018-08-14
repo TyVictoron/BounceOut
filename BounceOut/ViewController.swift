@@ -10,7 +10,8 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController,UICollisionBehaviorDelegate {
-
+    
+    // this has been updated for swift 4. { 7/10/18 }
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var resumeButtonOutlet: UIButton!
     @IBOutlet weak var textLabel: UILabel!
@@ -33,34 +34,34 @@ class ViewController: UIViewController,UICollisionBehaviorDelegate {
         score = 0
         
         //Hide Resume Button
-        resumeButtonOutlet.hidden = true
+        resumeButtonOutlet.isHidden = true
         
         // Add background
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "BounceOutBackground.png")!)
         
         // add a ball object to the view
-        ball = UIView(frame: CGRectMake(view.center.x, view.center.y, 20, 20))
-        ball.backgroundColor = UIColor.whiteColor()
+        ball = UIView(frame: CGRect(x: view.center.x, y: view.center.y, width: 20, height: 20))
+        ball.backgroundColor = UIColor.white
         ball.layer.cornerRadius = 10
         ball.clipsToBounds = true
         view.addSubview(ball)
         
         // add a red paddle object to the view
-        paddle = UIView(frame: CGRectMake(view.center.x, view.center.y * 1.7
-            , 80, 20))
-        paddle.backgroundColor = UIColor.redColor()
+        paddle = UIView(frame: CGRect(x: view.center.x, y: view.center.y * 1.7, width: 80, height: 20))
+        paddle.backgroundColor = UIColor.red
         view.addSubview(paddle)
         
         dynamicAnimator = UIDynamicAnimator(referenceView: view)
         
         // Set up bricks
-        var width = (Int)(view.bounds.size.width - 40)
-        var xOffset = ((Int)(view.bounds.size.width) % 42) / 2
-        for var x = xOffset; x < width; x += 42 {addBlock(x, y:  40, color: UIColor.blueColor())}
-        for var x = xOffset; x < width; x += 42 {addBlock(x, y:  62, color: UIColor.blueColor())}
-        for var x = xOffset; x < width; x += 42 {addBlock(x, y:  84, color: UIColor.yellowColor())}
-        for var x = xOffset; x < width; x += 42 {addBlock(x, y:  106, color: UIColor.yellowColor())}
-        for var x = xOffset; x < width; x += 42 {addBlock(x, y:  128, color: UIColor.yellowColor())}
+        let width = (Int)(view.bounds.size.width - 40)
+        let xOffset = ((Int)(view.bounds.size.width) % 42) / 2
+        
+        for x in stride(from: xOffset, to: width, by: 42) {addBlock(x: x, y:  40, color: UIColor.blue)}
+        for x in stride(from: xOffset, to: width, by: 42) {addBlock(x: x, y:  62, color: UIColor.blue)}
+        for x in stride(from: xOffset, to: width, by: 42) {addBlock(x: x, y:  84, color: UIColor.yellow)}
+        for x in stride(from: xOffset, to: width, by: 42) {addBlock(x: x, y:  106, color: UIColor.yellow)}
+        for x in stride(from: xOffset, to: width, by: 42) {addBlock(x: x, y:  128, color: UIColor.yellow)}
         
         // create dynamic behavior for the ball
         let ballDynamicBehavior = UIDynamicItemBehavior(items: [ball])
@@ -87,73 +88,73 @@ class ViewController: UIViewController,UICollisionBehaviorDelegate {
         dynamicAnimator.addBehavior(brickDynamicBehavior)
         
         // create push behavior to get the ball moving
-        let pushBehavior = UIPushBehavior(items: [ball], mode: .Instantaneous)
-        pushBehavior.pushDirection = CGVectorMake(0.2, 1.0)
+        let pushBehavior = UIPushBehavior(items: [ball], mode: .instantaneous)
+        pushBehavior.pushDirection = CGVector(dx: 0.2, dy: 1.0)
         pushBehavior.magnitude = 0.25
         dynamicAnimator.addBehavior(pushBehavior)
         
         //creat collision behaviors so ball can bounce off other objects
         collisionBehavior = UICollisionBehavior(items: allObjects)
         collisionBehavior.translatesReferenceBoundsIntoBoundary = true
-        collisionBehavior.collisionMode = .Everything
+        collisionBehavior.collisionMode = .everything
         collisionBehavior.collisionDelegate = self
         dynamicAnimator.addBehavior(collisionBehavior)
         
         textLabel.text = "Lives: \(lives)"
         
-        blockHit = self.setupAudioPlayerWithFile("BlockHit", type:"wav")
-        loseLife = self.setupAudioPlayerWithFile("loseLife", type:"wav")
+        blockHit = self.setupAudioPlayerWithFile(file: "BlockHit", type:"wav")
+        loseLife = self.setupAudioPlayerWithFile(file: "loseLife", type:"wav")
     }
-
+    
     @IBAction func dragPaddle(sender: UIPanGestureRecognizer) {
-        var panGesture = sender.locationInView(view)
-        paddle.center = CGPointMake(panGesture.x, paddle.center.y)
-        dynamicAnimator.updateItemUsingCurrentState(paddle)
+        let panGesture = sender.location(in: view)
+        paddle.center = CGPoint(x: panGesture.x, y: paddle.center.y)
+        dynamicAnimator.updateItem(usingCurrentState: paddle)
     }
     
     // collision behavior deligate method (with boundary)
-    func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying, atPoint p: CGPoint) {
+    func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item: UIDynamicItem, withBoundaryIdentifier identifier: NSCopying?, at p: CGPoint) {
         if item.isEqual(ball) && p.y > paddle.center.y {
-            lives--
+            lives-=1
             loseLife.play()
             if lives > 0 {
                 textLabel.text = "Lives: \(lives)"
                 ball.center = view.center
-                dynamicAnimator.updateItemUsingCurrentState(ball)
+                dynamicAnimator.updateItem(usingCurrentState: ball)
             }
             else {
                 textLabel.text = "Game Over!"
                 ball.removeFromSuperview()
                 collisionBehavior.removeItem(ball)
-                resetGame("Game Over!")
+                resetGame(winLossText: "Game Over!")
             }
         }
     }
     
     // collision behavior delegate method (with another object)
-    func collisionBehavior(behavior: UICollisionBehavior, beganContactForItem item1: UIDynamicItem, withItem item2: UIDynamicItem, atPoint p: CGPoint) {
-        var item = UIView()
+    func collisionBehavior(_ behavior: UICollisionBehavior, beganContactFor item1: UIDynamicItem, with item2: UIDynamicItem, at p: CGPoint) {
+        _ = UIView()
         var hiddenBlockCount = 0
         for block in bricks {
             if item1.isEqual(ball) && item2.isEqual(block) {
-                if block.backgroundColor == UIColor.blueColor() {
-                    block.backgroundColor = UIColor.yellowColor()
-                    scoreLabel.text = "Score: \(score++)"
+                if block.backgroundColor == UIColor.blue {
+                    block.backgroundColor = UIColor.yellow
+                    scoreLabel.text = "Score: \(score+=1)"
                     blockHit.play()
                 }
                 else {
-                    block.hidden = true
+                    block.isHidden = true
                     collisionBehavior.removeItem(block)
-                    scoreLabel.text = "Score: \(score++)"
+                    scoreLabel.text = "Score: \(score+=1)"
                     blockHit.play()
                 }
             }
-            if block.hidden == true {
-                hiddenBlockCount++
+            if block.isHidden == true {
+                hiddenBlockCount+=1
             }
         }
         if hiddenBlockCount == bricks.count {
-            resetGame("You Win!")
+            resetGame(winLossText: "You Win!")
         }
     }
     
@@ -171,25 +172,25 @@ class ViewController: UIViewController,UICollisionBehaviorDelegate {
         resetLives()
         allObjects = []
         bricks = []
-        ball.hidden = true
-        paddle.hidden = true
+        ball.isHidden = true
+        paddle.isHidden = true
         collisionBehavior.removeItem(ball)
-        dynamicAnimator.updateItemUsingCurrentState(ball)
+        dynamicAnimator.updateItem(usingCurrentState: ball)
         collisionBehavior.removeItem(paddle)
-        dynamicAnimator.updateItemUsingCurrentState(paddle)
+        dynamicAnimator.updateItem(usingCurrentState: paddle)
         ball.removeFromSuperview()
         
         // Reset button / exit to menu
-        var alert = UIAlertController(title: winLossText, message: nil, preferredStyle: UIAlertControllerStyle.Alert)
+        var alert = UIAlertController(title: winLossText, message: nil, preferredStyle: UIAlertControllerStyle.alert)
         
-        var playAgainAction = UIAlertAction(title: "Play Again", style: UIAlertActionStyle.Default) { (action) -> Void in
+        var playAgainAction = UIAlertAction(title: "Play Again", style: UIAlertActionStyle.default) { (action) -> Void in
             self.viewDidLoad()
         }
         
         alert.addAction(playAgainAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        self.present(alert, animated: true, completion: nil)
         
-        var quitAction = UIAlertAction(title: "Quit", style: UIAlertActionStyle.Destructive) { (action) -> Void in
+        var quitAction = UIAlertAction(title: "Quit", style: UIAlertActionStyle.destructive) { (action) -> Void in
             if let resultController = self.storyboard?.instantiateViewControllerWithIdentifier("MenuID") as? MenuViewController {
                 self.presentViewController(resultController, animated: true, completion: nil)
             }
@@ -199,7 +200,7 @@ class ViewController: UIViewController,UICollisionBehaviorDelegate {
     
     // check for all blocks hidden
     func addBlock(x: Int, y: Int, color: UIColor) {
-        var block = UIView(frame: CGRectMake((CGFloat)(x), (CGFloat)(y), 40, 20))
+        let block = UIView(frame: CGRect(x: (CGFloat)(x), y: (CGFloat)(y), width: 40, height: 20))
         block.backgroundColor = color
         view.addSubview(block)
         bricks.append(block)
@@ -207,7 +208,7 @@ class ViewController: UIViewController,UICollisionBehaviorDelegate {
     }
     
     @IBAction func pauseButton(sender: UIButton) {
-        resumeButtonOutlet.hidden = false
+        resumeButtonOutlet.isHidden = false
         
         let ballDynamicBehavior = UIDynamicItemBehavior(items: [ball])
         ballDynamicBehavior.friction = 0
@@ -219,9 +220,9 @@ class ViewController: UIViewController,UICollisionBehaviorDelegate {
     
     @IBAction func ResumeButtonAction(sender: UIButton) {
         
-        resumeButtonOutlet.hidden = true
+        resumeButtonOutlet.isHidden = true
         collisionBehavior.addItem(ball)
-        dynamicAnimator.updateItemUsingCurrentState(ball)
+        dynamicAnimator.updateItem(usingCurrentState: ball)
         
         let ballDynamicBehavior = UIDynamicItemBehavior(items: [ball])
         ballDynamicBehavior.friction = 0
@@ -230,8 +231,8 @@ class ViewController: UIViewController,UICollisionBehaviorDelegate {
         ballDynamicBehavior.allowsRotation = false
         dynamicAnimator.addBehavior(ballDynamicBehavior)
         
-        let pushBehavior = UIPushBehavior(items: [ball], mode: .Instantaneous)
-        pushBehavior.pushDirection = CGVectorMake(0.2, 1.0)
+        let pushBehavior = UIPushBehavior(items: [ball], mode: .instantaneous)
+        pushBehavior.pushDirection = CGVector(dx: 0.2, dy: 1.0)
         pushBehavior.magnitude = 0.25
         dynamicAnimator.addBehavior(pushBehavior)
         
@@ -240,15 +241,17 @@ class ViewController: UIViewController,UICollisionBehaviorDelegate {
     // Block Hit sound setup
     func setupAudioPlayerWithFile(file:NSString, type:NSString) -> AVAudioPlayer  {
         //1
-        var path = NSBundle.mainBundle().pathForResource(file, ofType:type)
-        var url = NSURL.fileURLWithPath(path!)
+        let path = Bundle.main.path(forResource: file as String, ofType:type as String)
+        let url = NSURL.fileURL(withPath: path!)
         
         //2
-        var error: NSError?
+        var _: NSError?
         
         //3
         var audioPlayer:AVAudioPlayer?
-        audioPlayer = AVAudioPlayer(contentsOfURL: url, error: &error)
+        
+        do { audioPlayer = try AVAudioPlayer(contentsOf: url)}
+        catch { print("sadness") }
         
         //4
         return audioPlayer!

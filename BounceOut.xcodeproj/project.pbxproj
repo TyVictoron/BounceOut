@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,14 +24,6 @@
 		3F935F021ABF282700E39D6C /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F935F011ABF282700E39D6C /* MenuViewController.swift */; };
 		3FC7CF1D1AD2C01700DEA559 /* BlockHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FC7CF1C1AD2C01700DEA559 /* BlockHit.wav */; };
 		3FD97BC61AD335BD000402C5 /* BounceOutAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BC51AD335BD000402C5 /* BounceOutAppIcon.png */; };
-		3FD97BF81AD351C9000402C5 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BCA1AD351C9000402C5 /* ic_launcher.png */; };
-		3FD97BF91AD351C9000402C5 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BCC1AD351C9000402C5 /* ic_launcher.png */; };
-		3FD97BFA1AD351C9000402C5 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BCE1AD351C9000402C5 /* ic_launcher.png */; };
-		3FD97BFB1AD351C9000402C5 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BD01AD351C9000402C5 /* ic_launcher.png */; };
-		3FD97BFC1AD351C9000402C5 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BD21AD351C9000402C5 /* ic_launcher.png */; };
-		3FD97BFD1AD351C9000402C5 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BD41AD351C9000402C5 /* ic_launcher.png */; };
-		3FD97BFE1AD351C9000402C5 /* playstore-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BD51AD351C9000402C5 /* playstore-icon.png */; };
-		3FD97BFF1AD351C9000402C5 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BD81AD351C9000402C5 /* Contents.json */; };
 		3FD97C001AD351C9000402C5 /* Icon-40.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BD91AD351C9000402C5 /* Icon-40.png */; };
 		3FD97C011AD351C9000402C5 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BDA1AD351C9000402C5 /* Icon-40@2x.png */; };
 		3FD97C021AD351C9000402C5 /* Icon-40@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BDB1AD351C9000402C5 /* Icon-40@3x.png */; };
@@ -51,16 +43,6 @@
 		3FD97C101AD351C9000402C5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BE91AD351C9000402C5 /* Icon@2x.png */; };
 		3FD97C111AD351C9000402C5 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BEA1AD351C9000402C5 /* iTunesArtwork.png */; };
 		3FD97C121AD351C9000402C5 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BEB1AD351C9000402C5 /* iTunesArtwork@2x.png */; };
-		3FD97C131AD351C9000402C5 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 3FD97BEC1AD351C9000402C5 /* README.md */; };
-		3FD97C141AD351C9000402C5 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BEF1AD351C9000402C5 /* Contents.json */; };
-		3FD97C151AD351C9000402C5 /* Icon-24@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BF01AD351C9000402C5 /* Icon-24@2x.png */; };
-		3FD97C161AD351C9000402C5 /* Icon-27.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BF11AD351C9000402C5 /* Icon-27.5@2x.png */; };
-		3FD97C171AD351C9000402C5 /* Icon-29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BF21AD351C9000402C5 /* Icon-29@2x.png */; };
-		3FD97C181AD351C9000402C5 /* Icon-29@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BF31AD351C9000402C5 /* Icon-29@3x.png */; };
-		3FD97C191AD351C9000402C5 /* Icon-40@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BF41AD351C9000402C5 /* Icon-40@2x.png */; };
-		3FD97C1A1AD351C9000402C5 /* Icon-44@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BF51AD351C9000402C5 /* Icon-44@2x.png */; };
-		3FD97C1B1AD351C9000402C5 /* Icon-86@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BF61AD351C9000402C5 /* Icon-86@2x.png */; };
-		3FD97C1C1AD351C9000402C5 /* Icon-98@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97BF71AD351C9000402C5 /* Icon-98@2x.png */; };
 		3FD97C221AD444FA000402C5 /* PowerUp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97C211AD444FA000402C5 /* PowerUp.wav */; };
 		3FD97C241AD44501000402C5 /* loseLife2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97C231AD44501000402C5 /* loseLife2.wav */; };
 		3FD97C261AD447AF000402C5 /* loseLife.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3FD97C251AD447AF000402C5 /* loseLife.wav */; };
@@ -104,14 +86,6 @@
 		3F935F011ABF282700E39D6C /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		3FC7CF1C1AD2C01700DEA559 /* BlockHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BlockHit.wav; sourceTree = "<group>"; };
 		3FD97BC51AD335BD000402C5 /* BounceOutAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BounceOutAppIcon.png; sourceTree = "<group>"; };
-		3FD97BCA1AD351C9000402C5 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
-		3FD97BCC1AD351C9000402C5 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
-		3FD97BCE1AD351C9000402C5 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
-		3FD97BD01AD351C9000402C5 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
-		3FD97BD21AD351C9000402C5 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
-		3FD97BD41AD351C9000402C5 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
-		3FD97BD51AD351C9000402C5 /* playstore-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "playstore-icon.png"; sourceTree = "<group>"; };
-		3FD97BD81AD351C9000402C5 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
 		3FD97BD91AD351C9000402C5 /* Icon-40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40.png"; sourceTree = "<group>"; };
 		3FD97BDA1AD351C9000402C5 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
 		3FD97BDB1AD351C9000402C5 /* Icon-40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@3x.png"; sourceTree = "<group>"; };
@@ -131,16 +105,6 @@
 		3FD97BE91AD351C9000402C5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3FD97BEA1AD351C9000402C5 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		3FD97BEB1AD351C9000402C5 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
-		3FD97BEC1AD351C9000402C5 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		3FD97BEF1AD351C9000402C5 /* Contents.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Contents.json; sourceTree = "<group>"; };
-		3FD97BF01AD351C9000402C5 /* Icon-24@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-24@2x.png"; sourceTree = "<group>"; };
-		3FD97BF11AD351C9000402C5 /* Icon-27.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-27.5@2x.png"; sourceTree = "<group>"; };
-		3FD97BF21AD351C9000402C5 /* Icon-29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@2x.png"; sourceTree = "<group>"; };
-		3FD97BF31AD351C9000402C5 /* Icon-29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-29@3x.png"; sourceTree = "<group>"; };
-		3FD97BF41AD351C9000402C5 /* Icon-40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-40@2x.png"; sourceTree = "<group>"; };
-		3FD97BF51AD351C9000402C5 /* Icon-44@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-44@2x.png"; sourceTree = "<group>"; };
-		3FD97BF61AD351C9000402C5 /* Icon-86@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-86@2x.png"; sourceTree = "<group>"; };
-		3FD97BF71AD351C9000402C5 /* Icon-98@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-98@2x.png"; sourceTree = "<group>"; };
 		3FD97C211AD444FA000402C5 /* PowerUp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = PowerUp.wav; sourceTree = "<group>"; };
 		3FD97C231AD44501000402C5 /* loseLife2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = loseLife2.wav; sourceTree = "<group>"; };
 		3FD97C251AD447AF000402C5 /* loseLife.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = loseLife.wav; sourceTree = "<group>"; };
@@ -251,73 +215,9 @@
 		3FD97BC71AD351C9000402C5 /* icon */ = {
 			isa = PBXGroup;
 			children = (
-				3FD97BC81AD351C9000402C5 /* android */,
 				3FD97BD61AD351C9000402C5 /* ios */,
-				3FD97BED1AD351C9000402C5 /* iwatch */,
 			);
 			path = icon;
-			sourceTree = "<group>";
-		};
-		3FD97BC81AD351C9000402C5 /* android */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BC91AD351C9000402C5 /* drawable-hdpi */,
-				3FD97BCB1AD351C9000402C5 /* drawable-ldpi */,
-				3FD97BCD1AD351C9000402C5 /* drawable-mdpi */,
-				3FD97BCF1AD351C9000402C5 /* drawable-xhdpi */,
-				3FD97BD11AD351C9000402C5 /* drawable-xxhdpi */,
-				3FD97BD31AD351C9000402C5 /* drawable-xxxhdpi */,
-				3FD97BD51AD351C9000402C5 /* playstore-icon.png */,
-			);
-			path = android;
-			sourceTree = "<group>";
-		};
-		3FD97BC91AD351C9000402C5 /* drawable-hdpi */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BCA1AD351C9000402C5 /* ic_launcher.png */,
-			);
-			path = "drawable-hdpi";
-			sourceTree = "<group>";
-		};
-		3FD97BCB1AD351C9000402C5 /* drawable-ldpi */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BCC1AD351C9000402C5 /* ic_launcher.png */,
-			);
-			path = "drawable-ldpi";
-			sourceTree = "<group>";
-		};
-		3FD97BCD1AD351C9000402C5 /* drawable-mdpi */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BCE1AD351C9000402C5 /* ic_launcher.png */,
-			);
-			path = "drawable-mdpi";
-			sourceTree = "<group>";
-		};
-		3FD97BCF1AD351C9000402C5 /* drawable-xhdpi */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BD01AD351C9000402C5 /* ic_launcher.png */,
-			);
-			path = "drawable-xhdpi";
-			sourceTree = "<group>";
-		};
-		3FD97BD11AD351C9000402C5 /* drawable-xxhdpi */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BD21AD351C9000402C5 /* ic_launcher.png */,
-			);
-			path = "drawable-xxhdpi";
-			sourceTree = "<group>";
-		};
-		3FD97BD31AD351C9000402C5 /* drawable-xxxhdpi */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BD41AD351C9000402C5 /* ic_launcher.png */,
-			);
-			path = "drawable-xxxhdpi";
 			sourceTree = "<group>";
 		};
 		3FD97BD61AD351C9000402C5 /* ios */ = {
@@ -333,7 +233,6 @@
 				3FD97BE91AD351C9000402C5 /* Icon@2x.png */,
 				3FD97BEA1AD351C9000402C5 /* iTunesArtwork.png */,
 				3FD97BEB1AD351C9000402C5 /* iTunesArtwork@2x.png */,
-				3FD97BEC1AD351C9000402C5 /* README.md */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -341,7 +240,6 @@
 		3FD97BD71AD351C9000402C5 /* AppIcon.appiconset */ = {
 			isa = PBXGroup;
 			children = (
-				3FD97BD81AD351C9000402C5 /* Contents.json */,
 				3FD97BD91AD351C9000402C5 /* Icon-40.png */,
 				3FD97BDA1AD351C9000402C5 /* Icon-40@2x.png */,
 				3FD97BDB1AD351C9000402C5 /* Icon-40@3x.png */,
@@ -352,30 +250,6 @@
 				3FD97BE01AD351C9000402C5 /* Icon-Small.png */,
 				3FD97BE11AD351C9000402C5 /* Icon-Small@2x.png */,
 				3FD97BE21AD351C9000402C5 /* Icon-Small@3x.png */,
-			);
-			path = AppIcon.appiconset;
-			sourceTree = "<group>";
-		};
-		3FD97BED1AD351C9000402C5 /* iwatch */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BEE1AD351C9000402C5 /* AppIcon.appiconset */,
-			);
-			path = iwatch;
-			sourceTree = "<group>";
-		};
-		3FD97BEE1AD351C9000402C5 /* AppIcon.appiconset */ = {
-			isa = PBXGroup;
-			children = (
-				3FD97BEF1AD351C9000402C5 /* Contents.json */,
-				3FD97BF01AD351C9000402C5 /* Icon-24@2x.png */,
-				3FD97BF11AD351C9000402C5 /* Icon-27.5@2x.png */,
-				3FD97BF21AD351C9000402C5 /* Icon-29@2x.png */,
-				3FD97BF31AD351C9000402C5 /* Icon-29@3x.png */,
-				3FD97BF41AD351C9000402C5 /* Icon-40@2x.png */,
-				3FD97BF51AD351C9000402C5 /* Icon-44@2x.png */,
-				3FD97BF61AD351C9000402C5 /* Icon-86@2x.png */,
-				3FD97BF71AD351C9000402C5 /* Icon-98@2x.png */,
 			);
 			path = AppIcon.appiconset;
 			sourceTree = "<group>";
@@ -425,7 +299,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = TyGames;
+				ORGANIZATIONNAME = "Ty Victorson";
 				TargetAttributes = {
 					3F48B20B1ABB0DD100ABD609 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -438,7 +312,7 @@
 				};
 			};
 			buildConfigurationList = 3F48B2071ABB0DD100ABD609 /* Build configuration list for PBXProject "BounceOut" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -464,56 +338,39 @@
 				3FC7CF1D1AD2C01700DEA559 /* BlockHit.wav in Resources */,
 				3FD97BC61AD335BD000402C5 /* BounceOutAppIcon.png in Resources */,
 				10848BE720173E950077E5C5 /* ios in Resources */,
-				3FD97C141AD351C9000402C5 /* Contents.json in Resources */,
 				3FD97C0C1AD351C9000402C5 /* Icon-72@2x.png in Resources */,
 				3FD97C111AD351C9000402C5 /* iTunesArtwork.png in Resources */,
-				3FD97BFF1AD351C9000402C5 /* Contents.json in Resources */,
 				3FD97C071AD351C9000402C5 /* Icon-Small.png in Resources */,
 				3FD97C241AD44501000402C5 /* loseLife2.wav in Resources */,
-				3FD97BFB1AD351C9000402C5 /* ic_launcher.png in Resources */,
 				3FD97C081AD351C9000402C5 /* Icon-Small@2x.png in Resources */,
 				3FD97C051AD351C9000402C5 /* Icon-76.png in Resources */,
 				3FD97C261AD447AF000402C5 /* loseLife.wav in Resources */,
 				3F48B2171ABB0DD100ABD609 /* Main.storyboard in Resources */,
-				3FD97BFD1AD351C9000402C5 /* ic_launcher.png in Resources */,
-				3FD97C161AD351C9000402C5 /* Icon-27.5@2x.png in Resources */,
 				3F25FE8F1ACDB108000E2C38 /* TyGamesLogo.png in Resources */,
-				3FD97BFC1AD351C9000402C5 /* ic_launcher.png in Resources */,
 				3FD97C001AD351C9000402C5 /* Icon-40.png in Resources */,
 				3FD97C2A1AD44E79000402C5 /* mainMenuBO.mp3 in Resources */,
 				3FD97C101AD351C9000402C5 /* Icon@2x.png in Resources */,
 				3FD97C091AD351C9000402C5 /* Icon-Small@3x.png in Resources */,
 				3F48B21C1ABB0DD100ABD609 /* LaunchScreen.xib in Resources */,
-				3FD97C1B1AD351C9000402C5 /* Icon-86@2x.png in Resources */,
 				3FD97C041AD351C9000402C5 /* Icon-60@3x.png in Resources */,
 				3F25FE8D1ACDAE73000E2C38 /* TyGamesInGameLogo.png in Resources */,
-				3FD97C1A1AD351C9000402C5 /* Icon-44@2x.png in Resources */,
 				3FD97C0B1AD351C9000402C5 /* Icon-72.png in Resources */,
 				3FD97C0E1AD351C9000402C5 /* Icon-Small-50@2x.png in Resources */,
 				3F48B2321ABB0ED100ABD609 /* BounceOutBackground.png in Resources */,
-				3FD97C151AD351C9000402C5 /* Icon-24@2x.png in Resources */,
-				3FD97BFA1AD351C9000402C5 /* ic_launcher.png in Resources */,
-				3FD97C181AD351C9000402C5 /* Icon-29@3x.png in Resources */,
-				3FD97BF91AD351C9000402C5 /* ic_launcher.png in Resources */,
 				3FD97C021AD351C9000402C5 /* Icon-40@3x.png in Resources */,
-				3FD97C171AD351C9000402C5 /* Icon-29@2x.png in Resources */,
 				3F48B2191ABB0DD100ABD609 /* Images.xcassets in Resources */,
 				3F050A421ACADA9000FF0247 /* PauseButton.png in Resources */,
 				3FD97C031AD351C9000402C5 /* Icon-60@2x.png in Resources */,
 				3FD97C011AD351C9000402C5 /* Icon-40@2x.png in Resources */,
 				3FD97C2E1AD56CC7000402C5 /* SoundButton.png in Resources */,
-				3FD97BFE1AD351C9000402C5 /* playstore-icon.png in Resources */,
 				3FD97C061AD351C9000402C5 /* Icon-76@2x.png in Resources */,
 				3FD97C121AD351C9000402C5 /* iTunesArtwork@2x.png in Resources */,
 				3FD97C0D1AD351C9000402C5 /* Icon-Small-50.png in Resources */,
 				3FD97C281AD44AA6000402C5 /* mainMenu.wav in Resources */,
 				3FD97C0F1AD351C9000402C5 /* Icon.png in Resources */,
-				3FD97C191AD351C9000402C5 /* Icon-40@2x.png in Resources */,
 				3FD97C301AD56CDB000402C5 /* SoundButtonMuted.png in Resources */,
 				3FD97C0A1AD351C9000402C5 /* Icon-60.png in Resources */,
 				3FD97C221AD444FA000402C5 /* PowerUp.wav in Resources */,
-				3FD97C1C1AD351C9000402C5 /* Icon-98@2x.png in Resources */,
-				3FD97BF81AD351C9000402C5 /* ic_launcher.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +392,6 @@
 				3FEFEE321AC99BF500DD686D /* ViewController2.swift in Sources */,
 				3F25FE911ACDB533000E2C38 /* ViewController3.swift in Sources */,
 				3FD97C2C1AD4ACA2000402C5 /* CreditsViewController.swift in Sources */,
-				3FD97C131AD351C9000402C5 /* README.md in Sources */,
 				3F050A441ACADBA000FF0247 /* PauseViewController.swift in Sources */,
 				3F935F021ABF282700E39D6C /* MenuViewController.swift in Sources */,
 				3F48B2121ABB0DD100ABD609 /* AppDelegate.swift in Sources */,
@@ -624,11 +480,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -670,10 +527,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -684,7 +543,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon";
 				INFOPLIST_FILE = BounceOut/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TyGames.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -695,7 +557,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon";
 				INFOPLIST_FILE = BounceOut/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TyGames.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -714,7 +579,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = BounceOutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TyGames.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BounceOut.app/BounceOut";
@@ -730,7 +599,11 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = BounceOutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "TyGames.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BounceOut.app/BounceOut";
